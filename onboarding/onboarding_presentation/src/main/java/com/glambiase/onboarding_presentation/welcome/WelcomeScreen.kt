@@ -14,11 +14,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import com.glambiase.core.R
+import com.glambiase.core.navigation.Route
+import com.glambiase.core.util.UIEvent
 import com.glambiase.core_ui.LocalSpacing
 import com.glambiase.onboarding_presentation.components.ActionButton
 
 @Composable
-fun WelcomeScreen() {
+fun WelcomeScreen(
+    onNavigate: (UIEvent.Navigate) -> Unit
+) {
     val spacing = LocalSpacing.current
     Column(
         verticalArrangement = Arrangement.Center,
@@ -35,7 +39,7 @@ fun WelcomeScreen() {
         Spacer(Modifier.height(spacing.spaceMedium))
         ActionButton(
             text = stringResource(R.string.next),
-            onClick = { /*TODO*/ },
+            onClick = { onNavigate(UIEvent.Navigate(Route.AGE)) },
             modifier = Modifier
                 .align(Alignment.CenterHorizontally)
         )
