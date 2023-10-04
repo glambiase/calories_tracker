@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
                     }
                     composable(Route.AGE) {
                     }
-                    composable(Route.GENDER) {
+                    composable(Route.SEX) {
                     }
                     composable(Route.HEIGHT) {
                     }
