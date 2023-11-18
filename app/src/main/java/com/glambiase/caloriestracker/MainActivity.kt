@@ -14,7 +14,9 @@ import androidx.navigation.compose.rememberNavController
 import com.glambiase.caloriestracker.navigation.navigate
 import com.glambiase.caloriestracker.ui.theme.CaloriesTrackerTheme
 import com.glambiase.core.navigation.Route
+import com.glambiase.onboarding_presentation.activity_level.ActivityLevelScreen
 import com.glambiase.onboarding_presentation.age.AgeScreen
+import com.glambiase.onboarding_presentation.goal.GoalScreen
 import com.glambiase.onboarding_presentation.height.HeightScreen
 import com.glambiase.onboarding_presentation.sex.SexScreen
 import com.glambiase.onboarding_presentation.weight.WeightScreen
@@ -67,11 +69,17 @@ class MainActivity : ComponentActivity() {
                                 onNavigate = navController::navigate
                             )
                         }
-                        composable(Route.NUTRIENT_GOAL) {
-                        }
-                        composable(Route.ACTIVITY) {
+                        composable(Route.ACTIVITY_LEVEL) {
+                            ActivityLevelScreen(
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.GOAL) {
+                            GoalScreen(
+                                onNavigate = navController::navigate
+                            )
+                        }
+                        composable(Route.NUTRIENT_GOAL) {
                         }
                         composable(Route.TRACKER_OVERVIEW) {
                         }
