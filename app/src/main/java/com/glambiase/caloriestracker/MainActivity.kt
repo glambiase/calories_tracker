@@ -18,6 +18,7 @@ import com.glambiase.onboarding_presentation.activity_level.ActivityLevelScreen
 import com.glambiase.onboarding_presentation.age.AgeScreen
 import com.glambiase.onboarding_presentation.goal.GoalScreen
 import com.glambiase.onboarding_presentation.height.HeightScreen
+import com.glambiase.onboarding_presentation.nutrient_goal.NutrientGoalScreen
 import com.glambiase.onboarding_presentation.sex.SexScreen
 import com.glambiase.onboarding_presentation.weight.WeightScreen
 import com.glambiase.onboarding_presentation.welcome.WelcomeScreen
@@ -80,6 +81,10 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable(Route.NUTRIENT_GOAL) {
+                            NutrientGoalScreen(
+                                scaffoldState = scaffoldState,
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.TRACKER_OVERVIEW) {
                         }

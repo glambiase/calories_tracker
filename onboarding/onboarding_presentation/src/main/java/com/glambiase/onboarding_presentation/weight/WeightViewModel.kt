@@ -9,7 +9,7 @@ import com.glambiase.core.R
 import com.glambiase.core.domain.preferences.Preferences
 import com.glambiase.core.navigation.Route
 import com.glambiase.core.util.UIEvent
-import com.glambiase.core.util.UiText
+import com.glambiase.core.util.UIText
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
@@ -36,7 +36,7 @@ class WeightViewModel @Inject constructor(
             val weightNumber = selectedWeight.toFloatOrNull() ?: run {
                 _uiEvent.send(
                     UIEvent.ShowSnackbar(
-                        UiText.StringResource(R.string.error_weight_cannot_be_empty)
+                        UIText.StringResource(R.string.error_weight_cannot_be_empty)
                     )
                 )
                 return@launch

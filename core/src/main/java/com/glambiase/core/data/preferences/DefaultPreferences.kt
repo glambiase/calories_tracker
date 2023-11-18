@@ -47,19 +47,19 @@ class DefaultPreferences(
             .putString(Preferences.KEY_GOAL, goal.value)
             .apply()
 
-    override fun saveCarbRatio(ratio: Float) =
+    override fun saveCarbsRatio(ratio: Float) =
         sharedPreferences
             .edit()
             .putFloat(Preferences.KEY_CARB_RATIO, ratio)
             .apply()
 
-    override fun saveProteinRatio(ratio: Float) =
+    override fun saveProteinsRatio(ratio: Float) =
         sharedPreferences
             .edit()
             .putFloat(Preferences.KEY_PROTEIN_RATIO, ratio)
             .apply()
 
-    override fun saveFatRatio(ratio: Float) =
+    override fun saveFatsRatio(ratio: Float) =
         sharedPreferences
             .edit()
             .putFloat(Preferences.KEY_FAT_RATIO, ratio)
@@ -83,9 +83,9 @@ class DefaultPreferences(
             weight = weight,
             activityLevel = ActivityLevel.fromString(activityLevel.orEmpty()),
             goal = Goal.fromString(goal.orEmpty()),
-            carbRatio = carbRatio,
-            proteinRatio = proteinRatio,
-            fatRatio = fatRatio
+            carbsRatio = carbRatio,
+            proteinsRatio = proteinRatio,
+            fatsRatio = fatRatio
         )
     }
 }

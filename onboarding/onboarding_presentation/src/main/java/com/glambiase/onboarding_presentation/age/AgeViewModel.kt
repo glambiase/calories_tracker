@@ -10,7 +10,7 @@ import com.glambiase.core.domain.use_case.FilterDigitsUseCase
 import com.glambiase.core.util.UIEvent
 import com.glambiase.core.R
 import com.glambiase.core.navigation.Route
-import com.glambiase.core.util.UiText
+import com.glambiase.core.util.UIText
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
@@ -38,7 +38,7 @@ class AgeViewModel @Inject constructor(
             val ageNumber = selectedAge.toIntOrNull() ?: run {
                 _uiEvent.send(
                     UIEvent.ShowSnackbar(
-                        UiText.StringResource(R.string.error_age_cannot_be_empty)
+                        UIText.StringResource(R.string.error_age_cannot_be_empty)
                     )
                 )
                 return@launch

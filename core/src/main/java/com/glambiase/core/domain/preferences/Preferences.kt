@@ -24,9 +24,9 @@ interface Preferences {
     fun saveWeight(weight: Float)
     fun saveActivityLevel(activityLevel: ActivityLevel)
     fun saveGoal(goal: Goal)
-    fun saveCarbRatio(ratio: Float)
-    fun saveProteinRatio(ratio: Float)
-    fun saveFatRatio(ratio: Float)
+    fun saveCarbsRatio(ratio: Float)
+    fun saveProteinsRatio(ratio: Float)
+    fun saveFatsRatio(ratio: Float)
 
     fun loadUserInfo(): UserInfo
 }
