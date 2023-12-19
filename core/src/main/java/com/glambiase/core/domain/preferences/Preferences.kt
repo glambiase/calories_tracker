@@ -16,6 +16,7 @@ interface Preferences {
         const val KEY_CARB_RATIO = "carb_ratio"
         const val KEY_PROTEIN_RATIO = "protein_ratio"
         const val KEY_FAT_RATIO = "fat_ratio"
+        const val KEY_SHOW_ONBOARDING = "show_onboarding"
     }
 
     fun saveAge(age: Int)
@@ -29,4 +30,7 @@ interface Preferences {
     fun saveFatsRatio(ratio: Float)
 
     fun loadUserInfo(): UserInfo
+
+    fun saveShouldShowOnboarding(shouldShowOnboarding: Boolean)
+    fun loadShouldShowOnboarding(): Boolean
 }
