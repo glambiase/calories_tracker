@@ -8,6 +8,7 @@ data class TrackerOverviewState(
     val totalCarbs: Int = 0,
     val totalFats: Int = 0,
     val totalProteins: Int = 0,
+    val caloriesGoal: Int = 0,
     val carbsGoal: Int = 0,
     val fatsGoal: Int = 0,
     val proteinsGoal: Int = 0,

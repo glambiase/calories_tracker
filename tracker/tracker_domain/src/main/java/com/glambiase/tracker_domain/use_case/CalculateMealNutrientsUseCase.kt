@@ -9,6 +9,10 @@ import com.glambiase.tracker_domain.model.MealType
 import com.glambiase.tracker_domain.model.TrackedFood
 import kotlin.math.roundToInt
 
+private const val CALORIES_PER_GRAM_OF_CARBS = 4f
+private const val CALORIES_PER_GRAM_OF_FATS = 9f
+private const val CALORIES_PER_GRAM_OF_PROTEINS = 4f
+
 class CalculateMealNutrientsUseCase(
     private val preferences: Preferences
 ) {
@@ -86,10 +90,4 @@ class CalculateMealNutrientsUseCase(
             Sex.Female -> (665.09f + 9.56f * userInfo.weight + 1.84f * userInfo.height - 4.67 * userInfo.age).roundToInt()
             Sex.Male -> (66.47f + 13.75f * userInfo.weight + 5f * userInfo.height - 6.75f * userInfo.age).roundToInt()
         }
-
-    companion object {
-        private const val CALORIES_PER_GRAM_OF_CARBS = 4f
-        private const val CALORIES_PER_GRAM_OF_FATS = 9f
-        private const val CALORIES_PER_GRAM_OF_PROTEINS = 4f
-    }
 }

@@ -7,8 +7,15 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.graphics.Color
+import com.glambiase.core_ui.BrightGreen
+import com.glambiase.core_ui.DarkGray
+import com.glambiase.core_ui.DarkGreen
 import com.glambiase.core_ui.Dimensions
+import com.glambiase.core_ui.LightGray
 import com.glambiase.core_ui.LocalSpacing
+import com.glambiase.core_ui.MediumGray
+import com.glambiase.core_ui.Orange
+import com.glambiase.core_ui.TextWhite
 
 private val DarkColorPalette = darkColors(
     primary = BrightGreen,
@@ -35,7 +42,7 @@ private val LightColorPalette = lightColors(
 )
 
 @Composable
-fun CaloriesTrackerTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
+fun CaloriesTrackerTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
     val colors = if (darkTheme) {
         DarkColorPalette
     } else {
