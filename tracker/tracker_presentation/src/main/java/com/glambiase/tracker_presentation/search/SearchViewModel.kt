@@ -60,6 +60,7 @@ class SearchViewModel @Inject constructor(
                 )
             }
             SearchEvent.OnSearch -> {
+                executeSearch()
             }
         }
     }
